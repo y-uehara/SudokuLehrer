@@ -12,7 +12,10 @@ jobs:
       run: |
         cd backend/test
         mkdir build
-    - run: ls backend/test
-
-        
-
+    - name: download GoogleTest and build test
+      run: |
+        cd backend/test/build
+        cmake ..
+        cmake --build .
+    - name: run test
+      run: backend/test/build/sudokusolver-test
