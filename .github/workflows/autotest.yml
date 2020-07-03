@@ -8,11 +8,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: download GoogleTest and run test  
+    - name: create build directory
       run: |
         cd backend/test
         mkdir build
-        cd build
-        ls
+    - run: ls backend/test
+
         
 
