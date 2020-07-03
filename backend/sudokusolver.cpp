@@ -1,6 +1,8 @@
 #include <vector>
 #include <cmath>
 
+#include <stdio.h>
+
 #include "sudokusolver.h"
 
 
