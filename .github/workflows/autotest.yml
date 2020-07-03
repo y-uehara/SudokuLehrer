@@ -1,14 +1,18 @@
-name: BackendTest
+name: CI
 
 on: [push]
 
 jobs:
-  build:
+  backend_test:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
-    - name: backend_test
-      run: |
-        ls
+    - run: cd backend/test
+    - run: mkdir build
+    - run: cd build
+    - run: cmake ..
+    - run: cmake --build .
+    - run: ./sudokusolver-test
+        
 
