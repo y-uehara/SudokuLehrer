@@ -2,6 +2,7 @@
 #include <cmath>
 
 #include <stdio.h>
+#include <string.h>
 
 #include "sudokusolver.h"
 
