@@ -10,11 +10,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: backend_test
     - run: |
-      cd backend/test
-      mkdir build/
-      cd build/
-      cmake ..
-      cmake --build .
-      ./sudokusolver-test
-
+      ls
 
