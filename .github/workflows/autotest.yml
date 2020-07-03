@@ -1,0 +1,21 @@
+name: CI
+
+on: [push]
+
+jobs:
+  backend_test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: create build directory
+      run: |
+        cd backend/test
+        mkdir build
+    - name: download GoogleTest and build test
+      run: |
+        cd backend/test/build
+        cmake ..
+        cmake --build .
+    - name: run test
+      run: backend/test/build/sudokusolver-test
