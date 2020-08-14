@@ -1,0 +1,29 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>GameBoard.qml</file>
+        <file>NumberPalette.qml</file>
+        <file>NumberPaletteItem.qml</file>
+        <file>SudokuNumber.qml</file>
+        <file>image/number3_0.png</file>
+        <file>image/number3_1.png</file>
+        <file>image/number3_2.png</file>
+        <file>image/number3_3.png</file>
+        <file>image/number3_4.png</file>
+        <file>image/number3_40.png</file>
+        <file>image/number3_41.png</file>
+        <file>image/number3_42.png</file>
+        <file>image/number3_43.png</file>
+        <file>image/number3_44.png</file>
+        <file>image/number3_45.png</file>
+        <file>image/number3_46.png</file>
+        <file>image/number3_47.png</file>
+        <file>image/number3_48.png</file>
+        <file>image/number3_49.png</file>
+        <file>image/number3_5.png</file>
+        <file>image/number3_6.png</file>
+        <file>image/number3_7.png</file>
+        <file>image/number3_8.png</file>
+        <file>image/number3_9.png</file>
+    </qresource>
+</RCC>

@@ -3,30 +3,30 @@
 
 #include <vector>
 
-#include <qul/object.h>
-#include <qul/singleton.h>
-#include <qul/property.h>
-#include <qul/signal.h>
+#include <QObject>
 
 #include "sudokusolver.h"
 
-class SudokuBoard : public Qul::Singleton<SudokuBoard>
+class SudokuBoard : public QObject
 {
+    Q_OBJECT
+
 public:
     explicit SudokuBoard();
     ~SudokuBoard();
 
     // invokable
-    void changeNumber(int x, int y, int num);
-    void calcNextHand();
-    void clearBoard();
+    Q_INVOKABLE void changeNumber(int x, int y, int num);
+    Q_INVOKABLE void calcNextHand();
+    Q_INVOKABLE void clearBoard();
 
-    Qul::Signal<void(int x, int y, int num)> numberChangeRequest;
-    Qul::Signal<void(int x, int y, bool legal)> legalChangeRequest;
+signals:
+    void numberChangeRequest(int x, int y, int num);
+    void legalChangeRequest(int x, int y, bool legal);
 
-    Qul::Signal<void()> stateIllegal;
-    Qul::Signal<void()> stateSolved;
-    Qul::Signal<void()> stateRegular;
+    void stateIllegal();
+    void stateSolved();
+    void stateRegular();
 
 private:
     SudokuSolver *m_solver;
